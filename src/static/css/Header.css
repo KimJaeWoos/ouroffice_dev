@@ -1,0 +1,17 @@
+/* 헤더 */
+div.headerwrap {background:#ffb300; width:100%; height:50px; position:fixed; top:0;}
+h1{font-size:16px; color:#fff; float:left; margin:15px 0 0 30px;}
+
+div.headerwrap span.text_srch {display:block; width:285px; height:30px; float:left; margin:10px 0 0 50px;}
+div.headerwrap span.text_srch input{width:220px; height:30px; float:left; padding:5px;font-size:16px; border:none;}
+div.headerwrap span.text_srch a.find_btn {display:block; width:40px; line-height:18px; height:20px; float:left; margin-left:0px; padding:5px; background:#f3f3f3;font-size:14px; color:#989898; text-align:center;}
+
+div.headerwrap div.mymenu {margin-right:50px; float:right; width:150px; height:30px; margin-top:10px;}
+div.headerwrap div.mymenu a.myteam {display:block; width:31px; height:31px; float:left; background:url(../images/team.png)no-repeat 0 0; margin-right: 20px;}
+div.headerwrap div.mymenu a.myhome {display:block; width:31px; height:31px; float:left; background:url(../images/home.png)no-repeat 0 0; margin-right: 20px;}
+div.headerwrap div.mymenu a.plusmenu {display:block; width:25px; height:31px; float:left; background:url(../images/plus.png)no-repeat 0 0;}
+div.headerwrap div.mymenu ul.submenu {display:block; position:absolute; z-index:1; margin-top:40px; width:120px; height:160px;  background:#fff; border:1px solid #ccc;}
+div.headerwrap div.mymenu ul.submenu li {display:block; width:100px; float:left; font-size:16px; padding:10px;}
+div.headerwrap div.mymenu ul.submenu li a {color:#616161;}
+div.headerwrap div.mymenu ul.submenu li a:hover {color:#ffb300;}
+/* /헤더 */

@@ -1,0 +1,55 @@
+/*reset*/
+html{color:#000; background:#FFF}
+article, aside, figure, footer, header, hgroup, nav, section{display:block}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,p,button,input,figure,strong{margin:0; padding:0}
+body,input, select{font-size:12px; font-family:dotum,돋움,malgungothic,맑은고딕,nanumgothic,나눔고딕,mAppleGothic,arial,Helvetica,sans-serif; color:#686868;}
+body,input {*word-break:break-all; -ms-word-wrap:break-all; white-space:normal; word-break:break-all} 
+/*input,select,*/button{vertical-align:middle}
+body {font-family:'Noto Sans KR', sans-serif;}
+a{cursor:pointer;}
+a, a:link, a:visited, a:hover{text-decoration:none; color:#333}
+span{vertical-align:baseline}
+a img, img{border:0} 
+ul, ol{list-style:none}
+dl, font, p, ol, a{line-height:1.3}
+th{text-align:left; font-weight:normal; margin:0; padding:0}
+li {line-height:100%;}
+li a {padding:0; margin:0; line-height:130%;}
+label{vertical-align:baseline;}
+table {border:0; border-collapse:collapse; border-spacing:0}
+fieldset{border:none; padding:0; margin:0;}
+legend{position:absolute; top:0; left:0; width:0; height:0; overflow:hidden; padding:0; visibility:hidden; font-size:0; line-height:0}
+select{cursor:pointer; font-family:tahoma;}
+radio{border:none; background-color:#FFF}
+h4{font-size:12px}
+button{width:0;	height:0; font-size:0; line-height:0; margin:0;	padding:0; border:0; font-family:Noto Sans KR, sans-serif, dotum,"굴림",gulim; cursor:pointer}
+caption{text-indent:-5000em; width:0; height:0; margin:0; padding:0; display:none;}
+
+span.blind{display:none; text-indent:-9999px;}
+div.wrap {width:100%; height:1150px;}
+div.contswrap {width:960px; margin:0 auto;}
+div.header {width:960px; margin:0 auto; overflow:hidden;}
+
+
+/* 아이디, 비밀번호 찾기 */
+div.srch_idpw {width:600px; margin:0 auto; padding-top:70px;}
+div.srch_idpw div.srch_title {display:block; width:383px; color:#ccc; font-weight:100; font-size:43px; margin:30px auto;}
+div.srch_idpw div.srch_title a{color:#ccc;}
+div.srch_idpw div.srch_title a:hover {color:#ffb300;}
+div.srch_idpw span.id_title {display:block; width:270px; color:#ffb300; font-weight:500; font-size:30px; margin:30px auto;}
+div.srch_idpw div.srch_ld input.email_srch, input.pw_srch {display:block; margin:20px auto;width:440px; height:60px; padding:10px 15px;font-size:16px;}
+div.srch_idpw div.srch_ld span.sub_explain {display:block; width:440px; margin:0 auto; text-align:center; font-size:16px;}
+div.srch_idpw div.srch_ld a.srch_submit {display:block; margin:0 auto; width:400px; height:50px; line-height:48px; padding:10px 20px; background:#ccc; text-align:center; font-size:26px; color:#fff;}
+div.srch_idpw div.srch_ld p.acc_agree {width:306px; margin:15px auto; padding:10px 0 10px 0;}
+div.srch_idpw div.srch_ld p.acc_agree label{margin-right:28px;font-size:15px; position:relative; top:0px; margin-left:3px; color:#333;}
+
+div.srch_idpw span.pw_title {display:block; width:330px; color:#ffb300; font-weight:500; font-size:30px; margin:30px auto;}
+div.srch_idpw div.srch_pw {margin-top:40px; padding-top:20px; border-top:1px solid #ccc;}
+div.srch_idpw div.srch_pw input.email_srch, input.pw_srch {display:block; margin:20px auto;width:440px; height:60px; padding:10px 15px;font-size:16px;}
+div.srch_idpw div.srch_pw span.sub_explain {display:block; width:440px; margin:0 auto; text-align:center; font-size:16px;}
+div.srch_idpw div.srch_pw a.srch_submit {display:block; margin:0 auto; width:400px; height:50px; line-height:48px; padding:10px 20px; background:#ccc; text-align:center; font-size:26px; color:#fff;}
+div.srch_idpw div.srch_pw p.acc_agree {width:306px; margin:15px auto; padding:10px 0 10px 0;}
+div.srch_idpw div.srch_pw p.acc_agree label{margin-right:28px;font-size:15px; position:relative; top:0px; margin-left:3px; color:#333;}
+/* /아이디, 비밀번호 찾기 */
+
+
