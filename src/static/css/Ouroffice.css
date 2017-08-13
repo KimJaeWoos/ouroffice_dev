@@ -30,6 +30,57 @@ div.wrap {width:100%; height:1150px;}
 div.contswrap {width:960px; margin:0 auto;}
 div.header {width:960px; margin:0 auto; overflow:hidden;}
 
+/* 헤더 */
+div.headerwrap {background:#ffb300; width:100%; height:50px; position:fixed; top:0;}
+h1{font-size:16px; color:#fff; float:left; margin:15px 0 0 30px;}
+
+div.headerwrap span.text_srch {display:block; width:285px; height:30px; float:left; margin:10px 0 0 50px;}
+div.headerwrap span.text_srch input{width:220px; height:30px; float:left; padding:5px;font-size:16px; border:none;}
+div.headerwrap span.text_srch a.find_btn {display:block; width:40px; line-height:18px; height:20px; float:left; margin-left:0px; padding:5px; background:#f3f3f3;font-size:14px; color:#989898; text-align:center;}
+
+div.headerwrap div.mymenu {margin-right:50px; float:right; width:150px; height:30px; margin-top:10px;}
+div.headerwrap div.mymenu a.myteam {display:block; width:31px; height:31px; float:left; background:url(../images/team.png)no-repeat 0 0; margin-right: 20px;}
+div.headerwrap div.mymenu a.myhome {display:block; width:31px; height:31px; float:left; background:url(../images/home.png)no-repeat 0 0; margin-right: 20px;}
+div.headerwrap div.mymenu a.plusmenu {display:block; width:25px; height:31px; float:left; background:url(../images/plus.png)no-repeat 0 0;}
+div.headerwrap div.mymenu ul.submenu {display:block; position:absolute; z-index:1; margin-top:40px; width:120px; height:160px;  background:#fff; border:1px solid #ccc;}
+div.headerwrap div.mymenu ul.submenu li {display:block; width:100px; float:left; font-size:16px; padding:10px;}
+div.headerwrap div.mymenu ul.submenu li a {color:#616161;}
+div.headerwrap div.mymenu ul.submenu li a:hover {color:#ffb300;}
+/* /헤더 */
+/* 푸터 */
+div.footerwrap{width:100%; float:left; background:#f3f3f3;}
+div.footerwrap div.footer {width:960px; height:30px; margin:0 auto; padding-top:10px;}
+div.footerwrap div.footer div.company_menu {width:410px; height:20px; float:right;}
+div.footerwrap div.footer div.company_menu a {font-size:12px; color:#666666; margin:0 10px;}
+div.footerwrap div.footer span.copyright {display:block; float:left;}
+/* /푸터 */
+
+/* 로그인 */
+div.login {width:600px; margin:0 auto; padding-top:200px;}
+div.login h2 {display:block; width:198px; height:50px; color:#ccc; font-weight:100; font-size:43px; margin:30px auto;}
+div.login h3 {display:block; width:84px; height:50px; color:#ffb300; font-weight:500; font-size:30px; margin:30px auto;}
+div.login div.label_login input.emailbox, input.pwbox {display:block; margin:20px auto; width:440px; height:60px; padding:10px 15px;font-size:16px;}
+div.login div.label_login a.login_submit {display:block; margin:0 auto; width:400px; height:50px; line-height:48px; padding:10px 20px; background:#ffb300; text-align:center; font-size:26px; color:#fff;}
+div.login div.label_login p.login_plus {width:440px; margin:15px auto; padding:10px 0 10px 0;}
+div.login div.label_login p.login_plus label{margin-right:28px;font-size:15px; position:relative; top:0px; margin-left:3px; color:#333;}
+div.login div.label_login p.login_plus label:hover{color:#ffb300;}
+div.login div.label_login p.login_plus span.srch_info {display:block; height:20px; width:140px; position:relative; top:0px; float:right;}
+div.login div.label_login a.srch_id, a.srch_pw {font-size:15px;}
+div.login div.label_login a.srch_id:hover {color:#ffb300;}
+div.login div.label_login a.srch_pw:hover {color:#ffb300;}
+div.login div.label_login a.new_acc {display:block; margin:0 auto; width:400px; height:50px; line-height:48px; padding:10px 20px; background:#fff; text-align:center; font-weight:300; font-size:26px; color:#ccc; border:1px solid #ccc; margin-top:20px;}
+div.login div.label_login a.new_acc:hover {color:#ffb300; border:1px solid #ffb300;}
+/* /로그인 */
+
+/* 회원가입 */
+div.plus_acc {width:600px; margin:0 auto; padding-top:200px;}
+div.plus_acc h2 {display:block; width:160px; color:#ccc; font-weight:100; font-size:43px; margin:30px auto;}
+div.plus_acc h3 {display:block; width:210px; color:#ffb300; font-weight:500; font-size:30px; margin:30px auto;}
+div.plus_acc div.label_acc input.namebox, input.accbox, input.pswdbox {display:block; margin:20px auto;width:440px; height:60px; padding:10px 15px;font-size:16px;}
+div.plus_acc a.acc_submit {display:block; margin:0 auto; width:400px; height:50px; line-height:48px; padding:10px 20px; background:#ffb300; text-align:center; font-size:26px; color:#fff;}
+div.plus_acc div.label_acc p.acc_agree {width:306px; margin:15px auto; padding:10px 0 10px 0;}
+div.plus_acc div.label_acc p.acc_agree label{margin-right:28px;font-size:15px; position:relative; top:0px; margin-left:3px; color:#333;}
+/* /회원가입 */
 
 /* 아이디, 비밀번호 찾기 */
 div.srch_idpw {width:600px; margin:0 auto; padding-top:70px;}
@@ -52,4 +103,24 @@ div.srch_idpw div.srch_pw p.acc_agree {width:306px; margin:15px auto; padding:10
 div.srch_idpw div.srch_pw p.acc_agree label{margin-right:28px;font-size:15px; position:relative; top:0px; margin-left:3px; color:#333;}
 /* /아이디, 비밀번호 찾기 */
 
-
+/*로딩*/
+.Loading-wrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+.Loading {
+    white-space: nowrap;
+    font-size: 1.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+}
+/*/로딩*/

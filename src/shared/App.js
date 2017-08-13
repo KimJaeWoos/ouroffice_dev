@@ -1,23 +1,53 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { Etc, Home, Team } from 'pages';
-import {Header, Footer} from 'components';
-import {JoinContainer} from 'containers'
+import { Etc, Home, Team, Login, Join } from 'pages';
+import {GuestHeader, UserHeader, Footer, NoMatch} from 'components';
+import HeaderContainer from "../containers/LayoutContainer/HeaderContainer";
 
 class App extends Component {
-  render() {
-    return (
-      <div>
-          <Header/>
-          <Route exact path="/" component={Home}/>
-          <Route exact path="/home/" component={Home}/>
-          <Route exact path="/home/join" component={JoinContainer}/>
-          <Route exact path="/etc" component={Etc}/>
-          <Route exact path="/team" component={Team}/>
-          <Footer/>
-      </div>
-    );
-  }
+
+    constructor(props) {
+        super();
+
+        this.state = {
+            isLogin: false
+        }
+    }
+
+    changeState = () => {
+        this.setState({
+            isLogin: true
+        });
+    };
+
+    render() {
+        const {isLogin} = this.state;
+
+        return (
+            <div>
+                <HeaderContainer isLogin={isLogin}/>
+                {
+                    isLogin ? (
+                        <Switch>
+                            <Route path="/" component={Home}/>
+                            <Route path="/etc" component={Etc}/>
+                            <Route path="/team" component={Team}/>
+                            <Route component={NoMatch}/>
+                        </Switch>
+                    ) : (
+                        <Switch>
+                            <Route path="/join" component={Join}/>
+                            <Route path="/" render={(props) => (
+                                <Login successLogin={this.changeState}/>
+                            )}/>
+                            <Route component={NoMatch}/>
+                        </Switch>
+                    )
+                }
+                <Footer/>
+            </div>
+        );
+    }
 }
 
 export default App;

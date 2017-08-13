@@ -5,10 +5,14 @@ import React from 'react';
 
 const Team = () => {
     return (
-        <div>
-            <h2>
-                팀
-            </h2>
+        <div className="wrap">
+            <div className="contswrap">
+                <div className="login">
+                    <h2>
+                        팀
+                    </h2>
+                </div>
+            </div>
         </div>
     );
 };

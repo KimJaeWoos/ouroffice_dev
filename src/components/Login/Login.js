@@ -2,8 +2,8 @@
  * Created by Jaewoos on 2017-07-30.
  */
 import React, {Component} from 'react';
-import { NavLink } from 'react-router-dom'
-import '../../static/css/Login.css';
+import { NavLink } from 'react-router-dom';
+
 
 class Login extends Component {
 
@@ -52,7 +52,7 @@ class Login extends Component {
                         <a href="" className="srch_pw">비밀번호 찾기</a>
                     </span>
                 </p>
-                <NavLink exact to="/home/join"><a className="new_acc">회원가입</a></NavLink>
+                <NavLink exact to="/join"><a className="new_acc">회원가입</a></NavLink>
             </div>
         );
     }

@@ -1,7 +1,0 @@
-/* 푸터 */
-div.footerwrap{width:100%; float:left; background:#f3f3f3;}
-div.footerwrap div.footer {width:960px; height:30px; margin:0 auto; padding-top:10px;}
-div.footerwrap div.footer div.company_menu {width:410px; height:20px; float:right;}
-div.footerwrap div.footer div.company_menu a {font-size:12px; color:#666666; margin:0 10px;}
-div.footerwrap div.footer span.copyright {display:block; float:left;}
-/* /푸터 */

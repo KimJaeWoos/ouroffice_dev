@@ -3,8 +3,10 @@
  */
 import LoginContainer from './LoginContainer/LoginContainer';
 import JoinContainer from './JoinContainer/JoinContainer';
+import HeaderContainer from './LayoutContainer/HeaderContainer';
 
 export {
     LoginContainer,
-    JoinContainer
+    JoinContainer,
+    HeaderContainer
 };

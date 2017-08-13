@@ -5,10 +5,14 @@ import React from 'react';
 
 const Etc = () => {
     return (
-        <div>
-            <h2>
-                더보기
-            </h2>
+        <div className="wrap">
+            <div className="contswrap">
+                <div className="login">
+                    <h2>
+                        기타
+                    </h2>
+                </div>
+            </div>
         </div>
     );
 };

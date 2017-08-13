@@ -2,7 +2,6 @@
  * Created by Jaewoos on 2017-07-30.
  */
 import React from 'react';
-import '../../static/css/Footer.css';
 
 const Footer = ({location, match}) => {
 

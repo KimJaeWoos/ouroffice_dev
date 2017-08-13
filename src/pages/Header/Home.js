@@ -6,7 +6,15 @@ import {LoginContainer} from 'containers'
 
 const Home = ({match}) => {
     return (
-        <LoginContainer/>
+        <div className="wrap">
+            <div className="contswrap">
+                <div className="login">
+                    <h2>
+                        홈
+                    </h2>
+                </div>
+            </div>
+        </div>
     );
 };
 

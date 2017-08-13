@@ -2,7 +2,6 @@
  * Created by Jaewoos on 2017-07-30.
  */
 import React, {Component} from 'react';
-import '../../static/css/Join.css';
 
 class JoinContainer extends Component {
 

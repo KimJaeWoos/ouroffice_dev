@@ -3,7 +3,6 @@
  */
 import React, {Component} from 'react';
 import { Login, Loading } from 'components';
-import '../../static/css/Login.css';
 
 class LoginContainer extends Component {
 
@@ -13,10 +12,9 @@ class LoginContainer extends Component {
         this.state = {
             userid: '',
             userpw: '',
-            isLogin: false,
             loadingVisaibillty: false
         }
-    }
+    };
 
     showLoding = () => {
         this.setState({
@@ -30,15 +28,33 @@ class LoginContainer extends Component {
                 });
             }, 1500
         );
-    }
+    };
 
     loginButtonClick = () => {
+        if (this.state.userid == '' || this.state.userpw == '') {
+            alert(this.props.emptyMsg);
+            return;
+
+        } else if (this.validateEmail(this.state.userid) == false) {
+            alert(this.props.validateMsg);
+            return;
+
+        }
+
+        // 로그인 성공 셋팅
+        this.props.login();
+
         this.showLoding();
-    }
+    };
 
     setUserInfo = (info) => {
         this.setState(info);
-    }
+    };
+
+    validateEmail = (value) => {
+        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(value);
+    };
 
     render() {
         const {loadingVisaibillty, userid, userpw} = this.state;
@@ -63,5 +79,12 @@ class LoginContainer extends Component {
         );
     };
 }
+
+Login.defaultProps = {
+    successMsg: '로그인 성공',
+    failMsg: '로그인 실패',
+    emptyMsg: '이메일과 패스워드를 정확히 입력해주세요.',
+    validateMsg: '이메일 형식에 맞지 않습니다.'
+};
 
 export default LoginContainer;

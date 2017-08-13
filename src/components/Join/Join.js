@@ -3,7 +3,6 @@
  */
 import React, {Component} from 'react';
 import { NavLink } from 'react-router-dom';
-import '../../static/css/Join.css';
 
 class Join extends Component {
 

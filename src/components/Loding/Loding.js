@@ -2,7 +2,6 @@
  * Created by Jaewoos on 2017-07-30.
  */
 import React, {Component} from 'react';
-import "../../static/css/Loading.css";
 
 class Loding extends Component {
     constructor(props) {
