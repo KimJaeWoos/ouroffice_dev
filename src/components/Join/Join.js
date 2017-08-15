@@ -22,31 +22,35 @@ class Join extends Component {
 
     render() {
         return (
-            <div className="label_login">
+            <div className="label_acc">
                 <h2>회원가입</h2>
+                <h3>사용자 정보 입력</h3>
                 <label for="login_id"/>
                 <input type="text" id="login_id"
-                       className="emailbox"
+                       className="namebox"
+                       placeholder="사용자 성함"
+                       name="username"
+                       onChange={this.handleChange}
+                />
+                <label for="login_em"/>
+                <input type="text" id="login_em"
+                       className="accbox"
+                       placeholder="이메일"
                        name="userid"
-                       placeholder="email address"
                        onChange={this.handleChange}
                 />
-                <label for="login_pw"/>
-                <input type="text"
-                       id="login_pw"
-                       className="pwbox"
+                <label for="login_psw"/>
+                <input type="password" id="login_psw"
+                       className="pswdbox"
+                       placeholder="비밀번호"
                        name="userpw"
-                       placeholder="password"
                        onChange={this.handleChange}
                 />
-                <p className="login_plus">
-                    <input type="checkbox" id="saveemil" className="save_emil_chck"/>
-                    <label for="saveemil" className="save_acc">이메일 기억하기</label>
-                    <input type="checkbox" id="savelogin" className="save_acc_chck"/>
-                    <label for="savelogin" className="save_acc">로그인 상태유지</label>
-                    <NavLink exact to="/home/join"><a className="save_id">회원가입</a></NavLink>
+                <a onClick={this.handleClick} className="acc_submit">가입하기</a>
+                <p className="acc_agree">
+                    <input type="checkbox" id="agree_chck" className="agree"/>
+                    <label for="agree_chck" className="save_acc">이용약관과 개인정보취급방침에 동의하기</label>
                 </p>
-                <a className="login_submit" onClick={this.handleClick}>로그인</a>
             </div>
         );
     }

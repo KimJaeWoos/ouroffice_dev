@@ -27,14 +27,14 @@ class Login extends Component {
                 <h2>아워오피스</h2>
                 <h3>로그인</h3>
                 <label for="login_id"/>
-                <input type="text" id="login_id"
+                <input type="email" id="login_id"
                        className="emailbox"
                        name="userid"
                        placeholder="email address"
                        onChange={this.handleChange}
                 />
                 <label for="login_pw"/>
-                <input type="text"
+                <input type="password"
                        id="login_pw"
                        className="pwbox"
                        name="userpw"
@@ -47,10 +47,7 @@ class Login extends Component {
                     <label for="saveemil" className="save_acc">이메일 기억하기</label>
                     <input type="checkbox" id="savelogin" className="save_acc_chck"/>
                     <label for="savelogin" className="save_acc">로그인 상태유지</label>
-                    <span className="srch_info">
-                        <a href="" className="srch_id">아이디</a> /
-                        <a href="" className="srch_pw">비밀번호 찾기</a>
-                    </span>
+                    <a class="srch_info">비밀번호 찾기</a>
                 </p>
                 <NavLink exact to="/join"><a className="new_acc">회원가입</a></NavLink>
             </div>

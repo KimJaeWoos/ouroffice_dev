@@ -2,7 +2,6 @@
  * Created by Jaewoos on 2017-07-30.
  */
 import React from 'react';
-import {LoginContainer} from 'containers'
 
 const Home = ({match}) => {
     return (
@@ -10,7 +9,7 @@ const Home = ({match}) => {
             <div className="contswrap">
                 <div className="login">
                     <h2>
-                        홈
+                        홈페이지
                     </h2>
                 </div>
             </div>

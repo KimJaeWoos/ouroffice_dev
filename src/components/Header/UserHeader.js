@@ -9,7 +9,7 @@ const UserHeader = () => (
     <div className="headerwrap">
         <NavLink exact to="/"><h1 className="serlogo">아워오피스</h1></NavLink>
         <div className="search">
-            <a className="go_search"></a>
+            <a className="go_search" />
         </div>
         <span className="text_srch">
 			<input type="text" placeholder="검색어를 입력하세요"/>

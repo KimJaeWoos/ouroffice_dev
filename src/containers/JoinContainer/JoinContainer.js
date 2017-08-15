@@ -2,20 +2,63 @@
  * Created by Jaewoos on 2017-07-30.
  */
 import React, {Component} from 'react';
+import { Join, Loading } from 'components';
 
 class JoinContainer extends Component {
 
     constructor(props) {
         super();
 
+        this.state = {
+            username: '',
+            userid: '',
+            userpw: '',
+            loadingVisaibillty: false
+        }
     }
 
     showLoding = () => {
+        this.setState({
+            loadingVisaibillty: true
+        });
 
-    }
+        setTimeout(
+            () => {
+                this.setState({
+                    loadingVisaibillty: false
+                });
+            }, 1500
+        );
+    };
+
+
+    joinButtonClick = () => {
+        if (this.state.userid === '' || this.state.userpw === '' || this.state.username === '') {
+            alert(this.props.emptyMsg);
+            return;
+
+        } else if (this.validateEmail(this.state.userid) === false) {
+            alert(this.props.validateMsg);
+            return;
+
+        }
+
+        this.showLoding();
+    };
+
+    setUserInfo = (info) => {
+        this.setState(info);
+    };
+
+    validateEmail = (value) => {
+        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(value);
+    };
 
 
     render() {
+        const {loadingVisaibillty, userid} = this.state;
+
         return (
             <div className="wrap">
                 <div className="contswrap">
@@ -23,23 +66,11 @@ class JoinContainer extends Component {
                         <form action="#" method="post">
                             <fieldset className="">
                                 <legend>로그인</legend>
-                                <div className="label_acc">
-                                    <h2>회원가입</h2>
-                                    <h3>사용자 정보 입력</h3>
-                                    <label for="login_id"></label>
-                                    <input type="text" id="login_id" className="namebox" placeholder="사용자 성함"/>
-                                        <label for="login_em"></label>
-                                        <input type="text" id="login_em" className="accbox" placeholder="이메일"/>
-                                            <label for="login_psw"></label>
-                                            <input type="text" id="login_psw" className="pswdbox" placeholder="비밀번호"/>
-                                                <a href="" className="acc_submit">
-                                                    가입하기
-                                                </a>
-                                                <p className="acc_agree">
-                                                    <input type="checkbox" id="agree_chck" className="agree"/>
-                                                        <label for="agree_chck" className="save_acc">이용약관과 개인정보취급방침에 동의하기.</label>
-                                                </p>
-                                </div>
+                                <Join
+                                    changeInfo={this.setUserInfo}
+                                    buttonClick={this.joinButtonClick}
+                                />
+                                <Loading visible={loadingVisaibillty} message={userid +" 회원가입 완료"}/>
                             </fieldset>
                         </form>
                     </div>
@@ -48,5 +79,12 @@ class JoinContainer extends Component {
         );
     };
 }
+
+JoinContainer.defaultProps = {
+    successMsg: '회원가입 성공',
+    failMsg: '회원가입 실패',
+    emptyMsg: '회원정보를 정확히 입력해주세요.',
+    validateMsg: '이메일 형식에 맞지 않습니다.'
+};
 
 export default JoinContainer;

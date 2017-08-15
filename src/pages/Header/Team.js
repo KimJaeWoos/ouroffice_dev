@@ -9,7 +9,7 @@ const Team = () => {
             <div className="contswrap">
                 <div className="login">
                     <h2>
-                        팀
+                        팀페이지
                     </h2>
                 </div>
             </div>

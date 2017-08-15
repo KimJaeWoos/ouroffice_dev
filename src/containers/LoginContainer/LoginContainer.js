@@ -26,23 +26,23 @@ class LoginContainer extends Component {
                 this.setState({
                     loadingVisaibillty: false
                 });
+
+                // 로그인 성공 셋팅
+                this.props.login();
             }, 1500
         );
     };
 
     loginButtonClick = () => {
-        if (this.state.userid == '' || this.state.userpw == '') {
+        if (this.state.userid === '' || this.state.userpw === '') {
             alert(this.props.emptyMsg);
             return;
 
-        } else if (this.validateEmail(this.state.userid) == false) {
+        } else if (this.validateEmail(this.state.userid) === false) {
             alert(this.props.validateMsg);
             return;
 
         }
-
-        // 로그인 성공 셋팅
-        this.props.login();
 
         this.showLoding();
     };
@@ -80,7 +80,7 @@ class LoginContainer extends Component {
     };
 }
 
-Login.defaultProps = {
+LoginContainer.defaultProps = {
     successMsg: '로그인 성공',
     failMsg: '로그인 실패',
     emptyMsg: '이메일과 패스워드를 정확히 입력해주세요.',
