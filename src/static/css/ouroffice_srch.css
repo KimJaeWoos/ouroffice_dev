@@ -1,5 +1,6 @@
 /* 아이디, 비밀번호 찾기 */
-div.srch_idpw {width:600px; margin:0 auto; padding-top:70px;}
+div.srch_idpw h2 {display:block; width:256px; height:50px; color:#ccc; font-weight:100; font-size:43px; margin:30px auto;}
+div.srch_idpw {width:600px; margin:0 auto; padding-top:200px;}
 div.srch_idpw div.srch_title {display:block; width:243px; color:#ccc; font-weight:100; font-size:43px; margin:30px auto;}
 div.srch_idpw div.srch_title a{color:#ccc;}
 div.srch_idpw div.srch_title a:hover {color:#ffb300;}
@@ -11,10 +12,11 @@ div.srch_idpw div.srch_ld p.acc_agree {width:306px; margin:15px auto; padding:10
 div.srch_idpw div.srch_ld p.acc_agree label{margin-right:28px;font-size:15px; position:relative; top:0px; margin-left:3px; color:#333;}
 
 div.srch_idpw span.pw_title {display:block; width:330px; color:#ffb300; font-weight:500; font-size:30px; margin:30px auto;}
-div.srch_idpw div.srch_pw {margin-top:40px; padding-top:20px;}
+div.srch_idpw div.srch_pw {margin-top:40px;}
 div.srch_idpw div.srch_pw input.email_srch, input.pw_srch {display:block; margin:20px auto;width:440px; height:60px; padding:10px 15px;font-size:16px;}
 div.srch_idpw div.srch_pw span.sub_explain {display:block; width:440px; margin:0 auto; text-align:center; font-size:16px;}
 div.srch_idpw div.srch_pw a.srch_submit {display:block; margin:0 auto; width:400px; height:50px; line-height:48px; padding:10px 20px; background:#ccc; text-align:center; font-size:26px; color:#fff;}
 div.srch_idpw div.srch_pw p.acc_agree {width:306px; margin:15px auto; padding:10px 0 10px 0;}
 div.srch_idpw div.srch_pw p.acc_agree label{margin-right:28px;font-size:15px; position:relative; top:0px; margin-left:3px; color:#333;}
+
 /* /아이디, 비밀번호 찾기 */

@@ -47,7 +47,7 @@ class Login extends Component {
                     <label for="saveemil" className="save_acc">이메일 기억하기</label>
                     <input type="checkbox" id="savelogin" className="save_acc_chck"/>
                     <label for="savelogin" className="save_acc">로그인 상태유지</label>
-                    <a class="srch_info">비밀번호 찾기</a>
+                    <NavLink exact to="/search"><a class="srch_info">비밀번호 찾기</a></NavLink>
                 </p>
                 <NavLink exact to="/join"><a className="new_acc">회원가입</a></NavLink>
             </div>

@@ -2,21 +2,19 @@
  * Created by Jaewoos on 2017-07-30.
  */
 import React, {Component} from 'react';
-import { Join, Loading } from 'components';
-import * as service from '../../services/user';
+import { Search, Loading } from 'components';
 
-class JoinContainer extends Component {
+class UserSearchContainer extends Component {
 
     constructor(props) {
         super();
 
         this.state = {
-            username: '',
             userid: '',
-            userpw: '',
+            username: '',
             loadingVisaibillty: false
         }
-    }
+    };
 
     showLoding = () => {
         this.setState({
@@ -32,9 +30,8 @@ class JoinContainer extends Component {
         );
     };
 
-
-    joinButtonClick = () => {
-        if (this.state.userid === '' || this.state.userpw === '' || this.state.username === '') {
+    searchButtonClick = () => {
+        if (this.state.userid === '' || this.state.username === '') {
             alert(this.props.emptyMsg);
             return;
 
@@ -44,15 +41,8 @@ class JoinContainer extends Component {
 
         }
 
-        //this.fetchPostInfo(1);
-
         this.showLoding();
     };
-
-    fetchPostInfo = async (postId) => {
-        const isLogin = await service.login();
-        console.log(isLogin);
-    }
 
     setUserInfo = (info) => {
         this.setState(info);
@@ -63,22 +53,21 @@ class JoinContainer extends Component {
         return re.test(value);
     };
 
-
     render() {
-        const {loadingVisaibillty, userid} = this.state;
+        const {loadingVisaibillty, userid, username} = this.state;
 
         return (
             <div className="wrap">
                 <div className="contswrap">
-                    <div className="plus_acc">
+                    <div className="srch_idpw">
                         <form action="#" method="post">
                             <fieldset className="">
-                                <legend>로그인</legend>
-                                <Join
+                                <legend>비밀번호 찾기</legend>
+                                <Search
                                     changeInfo={this.setUserInfo}
-                                    buttonClick={this.joinButtonClick}
+                                    buttonClick={this.searchButtonClick}
                                 />
-                                <Loading visible={loadingVisaibillty} message={userid +" 회원가입 완료"}/>
+                                <Loading visible={loadingVisaibillty} message={userid +"/"+ username + "비밀번호 찾기"}/>
                             </fieldset>
                         </form>
                     </div>
@@ -88,11 +77,9 @@ class JoinContainer extends Component {
     };
 }
 
-JoinContainer.defaultProps = {
-    successMsg: '회원가입 성공',
-    failMsg: '회원가입 실패',
-    emptyMsg: '회원정보를 정확히 입력해주세요.',
+UserSearchContainer.defaultProps = {
+    emptyMsg: '이메일과 이름을 정확히 입력해주세요.',
     validateMsg: '이메일 형식에 맞지 않습니다.'
 };
 
-export default JoinContainer;
+export default UserSearchContainer;

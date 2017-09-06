@@ -7,6 +7,7 @@ import Team from './Header/Team';
 import NotFound from './NotFound/NotFound';
 import Login from './User/Login';
 import Join from './User/Join';
+import Search from './User/Search';
 
 export {
     Etc,
@@ -14,5 +15,6 @@ export {
     Team,
     NotFound,
     Login,
-    Join
+    Join,
+    Search
 };
