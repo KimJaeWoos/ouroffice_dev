@@ -1,20 +1,22 @@
 /**
- * Created by Jaewoos on 2017-07-30.
+ * Created by Jaewoos on 2017-08-13.
  */
 import React, {Component} from 'react';
-import { Search, Loading } from 'components';
+import { Join, Loading } from 'components';
+//import * as service from '../../services/user';
 
-class UserSearchContainer extends Component {
+class RegisterPage extends Component {
 
     constructor(props) {
         super();
 
         this.state = {
-            userid: '',
             username: '',
+            userid: '',
+            userpw: '',
             loadingVisaibillty: false
         }
-    };
+    }
 
     showLoding = () => {
         this.setState({
@@ -30,8 +32,9 @@ class UserSearchContainer extends Component {
         );
     };
 
-    searchButtonClick = () => {
-        if (this.state.userid === '' || this.state.username === '') {
+
+    joinButtonClick = () => {
+        if (this.state.userid === '' || this.state.userpw === '' || this.state.username === '') {
             alert(this.props.emptyMsg);
             return;
 
@@ -41,8 +44,15 @@ class UserSearchContainer extends Component {
 
         }
 
+        //this.fetchPostInfo(1);
+
         this.showLoding();
     };
+
+    fetchPostInfo = async (postId) => {
+        //const isLogin = await service.login();
+        //console.log(isLogin);
+    }
 
     setUserInfo = (info) => {
         this.setState(info);
@@ -53,21 +63,22 @@ class UserSearchContainer extends Component {
         return re.test(value);
     };
 
+
     render() {
-        const {loadingVisaibillty, userid, username} = this.state;
+        const {loadingVisaibillty, userid} = this.state;
 
         return (
             <div className="wrap">
                 <div className="contswrap">
-                    <div className="srch_idpw">
+                    <div className="plus_acc">
                         <form action="#" method="post">
                             <fieldset className="">
-                                <legend>비밀번호 찾기</legend>
-                                <Search
+                                <legend>로그인</legend>
+                                <Join
                                     changeInfo={this.setUserInfo}
-                                    buttonClick={this.searchButtonClick}
+                                    buttonClick={this.joinButtonClick}
                                 />
-                                <Loading visible={loadingVisaibillty} message={userid +"/"+ username + "비밀번호 찾기"}/>
+                                <Loading visible={loadingVisaibillty} message={userid +" 회원가입 완료"}/>
                             </fieldset>
                         </form>
                     </div>
@@ -77,9 +88,11 @@ class UserSearchContainer extends Component {
     };
 }
 
-UserSearchContainer.defaultProps = {
-    emptyMsg: '이메일과 이름을 정확히 입력해주세요.',
+RegisterPage.defaultProps = {
+    successMsg: '회원가입 성공',
+    failMsg: '회원가입 실패',
+    emptyMsg: '회원정보를 정확히 입력해주세요.',
     validateMsg: '이메일 형식에 맞지 않습니다.'
 };
 
-export default UserSearchContainer;
+export default RegisterPage;

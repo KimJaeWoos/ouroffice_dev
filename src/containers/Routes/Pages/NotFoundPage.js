@@ -4,10 +4,10 @@
 import React from 'react';
 import {NoMatch} from 'components'
 
-const NotFound = () => {
+const NotFoundPage = () => {
     return (
         <NoMatch/>
     );
 };
 
-export default NotFound;
+export default NotFoundPage;

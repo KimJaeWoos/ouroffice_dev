@@ -3,7 +3,7 @@
  */
 import React from 'react';
 
-const Home = ({match}) => {
+const HomePage = ({match}) => {
     return (
         <div className="wrap">
             <div className="contswrap">
@@ -17,4 +17,4 @@ const Home = ({match}) => {
     );
 };
 
-export default Home;
+export default HomePage;

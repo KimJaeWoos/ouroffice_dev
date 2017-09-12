@@ -86,3 +86,52 @@ div.footerwrap div.footer span.copyright {display:block; float:left;}
     font-weight: 600;
 }
 /*/로딩*/
+
+
+/* 회원가입 */
+div.plus_acc {width:600px; margin:0 auto; padding-top:200px;}
+div.plus_acc h2 {display:block; width:160px; color:#ccc; font-weight:100; font-size:43px; margin:30px auto;}
+div.plus_acc h3 {display:block; width:210px; color:#ffb300; font-weight:500; font-size:30px; margin:30px auto;}
+div.plus_acc div.label_acc input.namebox, input.accbox, input.pswdbox {display:block; margin:20px auto;width:440px; height:60px; padding:10px 15px;font-size:16px;}
+div.plus_acc a.acc_submit {display:block; margin:0 auto; width:400px; height:50px; line-height:48px; padding:10px 20px; background:#ffb300; text-align:center; font-size:26px; color:#fff;}
+div.plus_acc div.label_acc p.acc_agree {width:306px; margin:15px auto; padding:10px 0 10px 0;}
+div.plus_acc div.label_acc p.acc_agree label{margin-right:28px;font-size:15px; position:relative; top:0px; margin-left:3px; color:#333;}
+/* /회원가입 */
+
+/* 로그인 */
+div.login {width:600px; margin:0 auto; padding-top:200px;}
+div.login h2 {display:block; width:198px; height:50px; color:#ccc; font-weight:100; font-size:43px; margin:30px auto;}
+div.login h3 {display:block; width:84px; height:50px; color:#ffb300; font-weight:500; font-size:30px; margin:30px auto;}
+div.login div.label_login input.emailbox, input.pwbox {display:block; margin:20px auto; width:440px; height:60px; padding:10px 15px;font-size:16px;}
+div.login div.label_login a.login_submit {display:block; margin:0 auto; width:400px; height:50px; line-height:48px; padding:10px 20px; background:#ffb300; text-align:center; font-size:26px; color:#fff;}
+div.login div.label_login p.login_plus {width:440px; margin:15px auto; padding:10px 0 10px 0;}
+div.login div.label_login p.login_plus label{margin-right:50px;font-size:15px; position:relative; top:0px; margin-left:3px; color:#333;}
+div.login div.label_login p.login_plus label:hover{color:#ffb300;}
+div.login div.label_login p.login_plus a.srch_info {display:block; font-size:15px; height:20px; width:88px; position:relative; top:0px; float:right;}
+div.login div.label_login a.srch_info:hover {color:#ffb300;}
+div.login div.label_login a.new_acc {display:block; margin:0 auto; width:400px; height:50px; line-height:48px; padding:10px 20px; background:#fff; text-align:center; font-weight:300; font-size:26px; color:#ccc; border:1px solid #ccc; margin-top:20px;}
+div.login div.label_login a.new_acc:hover {color:#ffb300; border:1px solid #ffb300;}
+/* /로그인 */
+
+/* 아이디, 비밀번호 찾기 */
+div.srch_idpw h2 {display:block; width:256px; height:50px; color:#ccc; font-weight:100; font-size:43px; margin:30px auto;}
+div.srch_idpw {width:600px; margin:0 auto; padding-top:200px;}
+div.srch_idpw div.srch_title {display:block; width:243px; color:#ccc; font-weight:100; font-size:43px; margin:30px auto;}
+div.srch_idpw div.srch_title a{color:#ccc;}
+div.srch_idpw div.srch_title a:hover {color:#ffb300;}
+div.srch_idpw span.id_title {display:block; width:270px; color:#ffb300; font-weight:500; font-size:30px; margin:30px auto;}
+div.srch_idpw div.srch_ld input.email_srch, input.pw_srch {display:block; margin:20px auto;width:440px; height:60px; padding:10px 15px;font-size:16px;}
+div.srch_idpw div.srch_ld span.sub_explain {display:block; width:440px; margin:0 auto; text-align:center; font-size:16px;}
+div.srch_idpw div.srch_ld a.srch_submit {display:block; margin:0 auto; width:400px; height:50px; line-height:48px; padding:10px 20px; background:#ccc; text-align:center; font-size:26px; color:#fff;}
+div.srch_idpw div.srch_ld p.acc_agree {width:306px; margin:15px auto; padding:10px 0 10px 0;}
+div.srch_idpw div.srch_ld p.acc_agree label{margin-right:28px;font-size:15px; position:relative; top:0px; margin-left:3px; color:#333;}
+
+div.srch_idpw span.pw_title {display:block; width:330px; color:#ffb300; font-weight:500; font-size:30px; margin:30px auto;}
+div.srch_idpw div.srch_pw {margin-top:40px;}
+div.srch_idpw div.srch_pw input.email_srch, input.pw_srch {display:block; margin:20px auto;width:440px; height:60px; padding:10px 15px;font-size:16px;}
+div.srch_idpw div.srch_pw span.sub_explain {display:block; width:440px; margin:0 auto; text-align:center; font-size:16px;}
+div.srch_idpw div.srch_pw a.srch_submit {display:block; margin:0 auto; width:400px; height:50px; line-height:48px; padding:10px 20px; background:#ccc; text-align:center; font-size:26px; color:#fff;}
+div.srch_idpw div.srch_pw p.acc_agree {width:306px; margin:15px auto; padding:10px 0 10px 0;}
+div.srch_idpw div.srch_pw p.acc_agree label{margin-right:28px;font-size:15px; position:relative; top:0px; margin-left:3px; color:#333;}
+
+/* /아이디, 비밀번호 찾기 */

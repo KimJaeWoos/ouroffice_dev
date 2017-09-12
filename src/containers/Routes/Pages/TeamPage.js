@@ -3,13 +3,13 @@
  */
 import React from 'react';
 
-const Etc = () => {
+const TeamPage = () => {
     return (
         <div className="wrap">
             <div className="contswrap">
                 <div className="login">
                     <h2>
-                        기타
+                        팀페이지
                     </h2>
                 </div>
             </div>
@@ -17,4 +17,4 @@ const Etc = () => {
     );
 };
 
-export default Etc;
+export default TeamPage;

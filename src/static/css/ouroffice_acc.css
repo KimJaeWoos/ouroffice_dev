@@ -1,9 +1,0 @@
-/* 회원가입 */
-div.plus_acc {width:600px; margin:0 auto; padding-top:200px;}
-div.plus_acc h2 {display:block; width:160px; color:#ccc; font-weight:100; font-size:43px; margin:30px auto;}
-div.plus_acc h3 {display:block; width:210px; color:#ffb300; font-weight:500; font-size:30px; margin:30px auto;}
-div.plus_acc div.label_acc input.namebox, input.accbox, input.pswdbox {display:block; margin:20px auto;width:440px; height:60px; padding:10px 15px;font-size:16px;}
-div.plus_acc a.acc_submit {display:block; margin:0 auto; width:400px; height:50px; line-height:48px; padding:10px 20px; background:#ffb300; text-align:center; font-size:26px; color:#fff;}
-div.plus_acc div.label_acc p.acc_agree {width:306px; margin:15px auto; padding:10px 0 10px 0;}
-div.plus_acc div.label_acc p.acc_agree label{margin-right:28px;font-size:15px; position:relative; top:0px; margin-left:3px; color:#333;}
-/* /회원가입 */

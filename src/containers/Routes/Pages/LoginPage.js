@@ -1,10 +1,10 @@
 /**
- * Created by Jaewoos on 2017-07-30.
+ * Created by Jaewoos on 2017-08-13.
  */
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { Login, Loading } from 'components';
 
-class LoginContainer extends Component {
+class LoginPage extends Component {
 
     constructor(props) {
         super();
@@ -14,7 +14,7 @@ class LoginContainer extends Component {
             userpw: '',
             loadingVisaibillty: false
         }
-    };
+    }
 
     showLoding = () => {
         this.setState({
@@ -28,7 +28,7 @@ class LoginContainer extends Component {
                 });
 
                 // 로그인 성공 셋팅
-                this.props.login();
+                this.props.successLogin();
             }, 1500
         );
     };
@@ -78,13 +78,14 @@ class LoginContainer extends Component {
             </div>
         );
     };
-}
 
-LoginContainer.defaultProps = {
+};
+
+LoginPage.defaultProps = {
     successMsg: '로그인 성공',
     failMsg: '로그인 실패',
     emptyMsg: '이메일과 패스워드를 정확히 입력해주세요.',
     validateMsg: '이메일 형식에 맞지 않습니다.'
 };
 
-export default LoginContainer;
+export default LoginPage;

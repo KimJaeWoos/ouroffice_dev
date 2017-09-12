@@ -1,14 +1,20 @@
 /**
  * Created by Jaewoos on 2017-07-30.
  */
-import LoginContainer from './LoginContainer/LoginContainer';
-import JoinContainer from './JoinContainer/JoinContainer';
-import HeaderContainer from './LayoutContainer/HeaderContainer';
-import SearchContainer from './UserSearchContainer/UserSearchContainer';
+import Etc from './Routes/Pages/EtcPage';
+import Home from './Routes/Pages/HomePage';
+import Team from './Routes/Pages/TeamPage';
+import NotFound from './Routes/Pages/NotFoundPage';
+import Register from './Routes/Pages/RegisterPage';
+import Login from './Routes/Pages/LoginPage';
+import Search from './Routes/Pages/FindPage';
 
 export {
-    LoginContainer,
-    JoinContainer,
-    HeaderContainer,
-    SearchContainer
+    Etc,
+    Home,
+    Team,
+    NotFound,
+    Login,
+    Register,
+    Search
 };
