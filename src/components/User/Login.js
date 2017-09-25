@@ -24,8 +24,6 @@ class Login extends Component {
     render() {
         return (
             <div className="label_login">
-                <h2>아워오피스</h2>
-                <h3>로그인</h3>
                 <label for="login_id"/>
                 <input type="email" id="login_id"
                        className="emailbox"

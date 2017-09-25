@@ -13,6 +13,7 @@ import Join from './Register/Join';
 import Loading from './Etc/Loding';
 import NoMatch from './Etc/NoMatch';
 import Search from './Etc/Search';
+import Title from './Etc/Title';
 
 export {
     GuestHeader,
@@ -23,4 +24,5 @@ export {
     Loading,
     NoMatch,
     Search,
+    Title,
 };

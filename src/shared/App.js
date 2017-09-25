@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { Etc, Home, Team, Login, Register, Search } from 'containers';
 import {GuestHeader, UserHeader, Footer, NoMatch} from 'components';
+import { connect } from 'react-redux';
 
 class App extends Component {
 
@@ -20,12 +21,10 @@ class App extends Component {
     };
 
     render() {
-        const {isLogin} = this.state;
-
         return (
             <div>
                 {
-                    isLogin ? (
+                    this.props.status ? (
                         <div>
                             <UserHeader/>
                             <Switch>
@@ -55,5 +54,13 @@ class App extends Component {
         );
     }
 }
+
+let mapStateToProps = (state) => {
+    return {
+        status: state.login.status
+    };
+}
+
+App = connect(mapStateToProps)(App);
 
 export default App;

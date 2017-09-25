@@ -2,7 +2,9 @@
  * Created by Jaewoos on 2017-08-13.
  */
 import React, { Component } from 'react';
-import { Login, Loading } from 'components';
+import { Login, Loading, Title } from 'components';
+import { connect } from 'react-redux';
+import { success, fail } from '../../../action'
 
 class LoginPage extends Component {
 
@@ -28,7 +30,8 @@ class LoginPage extends Component {
                 });
 
                 // 로그인 성공 셋팅
-                this.props.successLogin();
+                //this.props.successLogin();
+                this.props.success();
             }, 1500
         );
     };
@@ -41,7 +44,6 @@ class LoginPage extends Component {
         } else if (this.validateEmail(this.state.userid) === false) {
             alert(this.props.validateMsg);
             return;
-
         }
 
         this.showLoding();
@@ -65,7 +67,10 @@ class LoginPage extends Component {
                     <div className="login">
                         <form action="#" method="post">
                             <fieldset className="">
-                                <legend>로그인</legend>
+                                <Title
+                                    mainTitle = "아워오피스"
+                                    subTitle = "로그인"
+                                />
                                 <Login
                                     changeInfo={this.setUserInfo}
                                     buttonClick={this.loginButtonClick}
@@ -87,5 +92,14 @@ LoginPage.defaultProps = {
     emptyMsg: '이메일과 패스워드를 정확히 입력해주세요.',
     validateMsg: '이메일 형식에 맞지 않습니다.'
 };
+
+let mapDispatchToProps = (dispatch) => {
+    return {
+        success: () => dispatch(success()),
+        fail: () => dispatch(fail()),
+    }
+}
+
+LoginPage = connect(undefined, mapDispatchToProps)(LoginPage);
 
 export default LoginPage;
